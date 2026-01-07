@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后台管理</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container admin-container">
+        <div class="admin-header">
+            <h1>投票数据管理</h1>
+            <button id="logoutBtn" class="logout-btn">退出登录</button>
+        </div>
+        
+        <div class="filters">
+            <input type="text" id="searchInput" placeholder="搜索投票人...">
+            <select id="sortSelect">
+                <option value="date">按时间排序</option>
+                <option value="score-asc">按分数升序</option>
+                <option value="score-desc">按分数降序</option>
+            </select>
+        </div>
+        
+        <div class="votes-list">
+            <table id="votesTable">
+                <thead>
+                    <tr>
+                        <th>投票人</th>
+                        <th>分数</th>
+                        <th>评价内容</th>
+                        <th>投票时间</th>
+                    </tr>
+                </thead>
+                <tbody id="votesBody">
+                    <!-- 投票数据将通过JavaScript动态生成 -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="../js/admin.js"></script>
+</body>
+</html>
